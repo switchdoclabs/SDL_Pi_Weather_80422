@@ -240,14 +240,16 @@ class SDL_Pi_Weather_80422:
       			# sample time exceeded, calculate currentWindSpeed
       			timeSpan = (micros() - SDL_Pi_Weather_80422._startSampleTime);
  
-      			SDL_Pi_Weather_80422._currentWindSpeed = (float(SDL_Pi_Weather_80422._currentWindCount)/float(timeSpan)) * WIND_FACTOR*1000000.0;
+      			SDL_Pi_Weather_80422._currentWindSpeed = (float(SDL_Pi_Weather_80422._currentWindCount)/float(timeSpan)) * WIND_FACTOR*1000000.0
 
-      			SDL_Pi_Weather_80422._currentWindCount = 0;
+			#print "SDL_CWS = %f, SDL_Pi_Weather_80422._shortestWindTime = %i, CWCount=%i TPS=%f" % (SDL_Pi_Weather_80422._currentWindSpeed,SDL_Pi_Weather_80422._shortestWindTime, SDL_Pi_Weather_80422._currentWindCount, float(SDL_Pi_Weather_80422._currentWindCount)/float(SDL_Pi_Weather_80422._sampleTime)) 
+
+      			SDL_Pi_Weather_80422._currentWindCount = 0
       
-      			SDL_Pi_Weather_80422._startSampleTime = micros();
+      			SDL_Pi_Weather_80422._startSampleTime = micros()
 
-  
-   		return SDL_Pi_Weather_80422._currentWindSpeed;
+ 		#print "SDL_Pi_Weather_80422._currentWindSpeed=", SDL_Pi_Weather_80422._currentWindSpeed 
+   		return SDL_Pi_Weather_80422._currentWindSpeed
 
 
 
@@ -305,7 +307,6 @@ class SDL_Pi_Weather_80422:
 
   		currentTime= (micros()-SDL_Pi_Weather_80422._lastWindTime);
 
-		print "currentTime=%i, SDL_Pi_Weather_80422._shortestWindTime = %i, SDL_Pi_Weather_80422._lastWindTime=%i" % (currentTime, SDL_Pi_Weather_80422._shortestWindTime, SDL_Pi_Weather_80422._lastWindTime) 
   		SDL_Pi_Weather_80422._lastWindTime=micros();
 
   		if(currentTime>1000):   # debounce
