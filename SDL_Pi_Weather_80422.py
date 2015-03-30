@@ -291,7 +291,7 @@ class SDL_Pi_Weather_80422:
 		if (time == 0):
 			return 0
 		else:
-  			return (1.0/float(time))*WIND_FACTOR/2.0;
+  			return (1.0/float(time))*WIND_FACTOR;
 
 
   
@@ -305,6 +305,7 @@ class SDL_Pi_Weather_80422:
 
   		currentTime= (micros()-SDL_Pi_Weather_80422._lastWindTime);
 
+		print "currentTime=%i, SDL_Pi_Weather_80422._shortestWindTime = %i, SDL_Pi_Weather_80422._lastWindTime=%i" % (currentTime, SDL_Pi_Weather_80422._shortestWindTime, SDL_Pi_Weather_80422._lastWindTime) 
   		SDL_Pi_Weather_80422._lastWindTime=micros();
 
   		if(currentTime>1000):   # debounce
