@@ -7,7 +7,7 @@
 #  Argent Data Systems
 #  Created by SwitchDoc Labs February 13, 2015 
 #  Released into the public domain.
-#    Version 1.1 - updated constants to suppport 3.3V
+#    Version 1.2 - Fixed Wind Gust Measuremenet
 #    
 
 # imports

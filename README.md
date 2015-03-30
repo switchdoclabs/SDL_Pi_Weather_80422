@@ -8,5 +8,7 @@ Created by SwitchDoc Labs February 13, 2015. Released into the public domain.
 
 www.switchdoc.com
 
-
 Version 1.0 - February 13, 2015
+Version 1.1 - February 20, 2015 - Added 3.3V Constants
+Version 1.2 - March 30, 2015 - Fixed Wind Gust Measurement 
+
