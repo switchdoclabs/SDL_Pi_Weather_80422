@@ -7,7 +7,7 @@
 #  Argent Data Systems
 #  Created by SwitchDoc Labs February 13, 2015 
 #  Released into the public domain.
-#    Version 1.2 - Fixed Wind Gust Measuremenet
+#    Version 1.3 - remove 300ms Bounce
 #    
 
 # imports
@@ -163,8 +163,8 @@ class SDL_Pi_Weather_80422:
 		# when a falling edge is detected on port pinAnem, regardless of whatever   
 		# else is happening in the program, the function callback will be run  
 	
-		GPIO.add_event_detect(pinAnem, GPIO.RISING, callback=self.serviceInterruptAnem, bouncetime=300)  
-		GPIO.add_event_detect(pinRain, GPIO.RISING, callback=self.serviceInterruptRain, bouncetime=300)  
+		GPIO.add_event_detect(pinAnem, GPIO.RISING, callback=self.serviceInterruptAnem )  
+		GPIO.add_event_detect(pinRain, GPIO.RISING, callback=self.serviceInterruptRain )  
 
 		ADS1015 = 0x00  # 12-bit ADC
 		# Select the gain
