@@ -264,7 +264,7 @@ class SDL_Pi_Weather_80422:
 	#def get current values
 
 	def get_current_rain_total(self):
-        	rain_amount = 0.2794 * float(SDL_Pi_Weather_80422._currentRainCount)/2.0;  # mm of rain - we get two interrupts per bucket
+        	rain_amount = 0.2794 * float(SDL_Pi_Weather_80422._currentRainCount)
         	SDL_Pi_Weather_80422._currentRainCount = 0;
 		return rain_amount;
 
