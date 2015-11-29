@@ -176,7 +176,7 @@ class SDL_Pi_Weather_80422:
 
 		# Initialise the ADC using the default mode (use default I2C address)
 		# Set this to ADS1015 or ADS1115 depending on the ADC you are using!
-		self.ads1015 = ADS1x15(ic=ADS1015, address=0x49)
+		self.ads1015 = ADS1x15(ic=ADS1015, address=0x48)
 
 		SDL_Pi_Weather_80422._ADMode = ADMode
 
